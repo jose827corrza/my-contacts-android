@@ -3,7 +3,7 @@ package com.josedev.mycontacts.ui.theme
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "contacts")
+@Entity()
 data class Contact(
     val firstName: String,
     val lastName: String,

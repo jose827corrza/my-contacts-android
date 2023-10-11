@@ -84,7 +84,7 @@ class ContactViewModel(
                     )
                 }
             }
-            is ContactEvent.SetLastNameName -> {
+            is ContactEvent.SetLastName -> {
                 _state.update {
                     it.copy(
                         lastName = event.lastName
