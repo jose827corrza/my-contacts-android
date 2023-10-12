@@ -1,7 +1,12 @@
-package com.josedev.mycontacts.ui.theme
+package com.josedev.mycontacts.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.josedev.mycontacts.domain.entity.Contact
+import com.josedev.mycontacts.domain.repository.ContactDao
+import com.josedev.mycontacts.domain.repository.ContactEvent
+import com.josedev.mycontacts.domain.entity.ContactState
+import com.josedev.mycontacts.domain.entity.SortType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine

@@ -1,12 +1,9 @@
-package com.josedev.mycontacts
+package com.josedev.mycontacts.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -16,8 +13,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
-import com.josedev.mycontacts.ui.theme.ContactDatabase
-import com.josedev.mycontacts.ui.theme.ContactViewModel
+import com.josedev.mycontacts.data.ContactDatabase
+import com.josedev.mycontacts.presentation.composable.ContactScreen
+import com.josedev.mycontacts.presentation.viewmodel.ContactViewModel
 import com.josedev.mycontacts.ui.theme.MyContactsTheme
 
 class MainActivity : ComponentActivity() {

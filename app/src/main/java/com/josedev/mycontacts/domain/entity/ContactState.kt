@@ -1,4 +1,7 @@
-package com.josedev.mycontacts.ui.theme
+package com.josedev.mycontacts.domain.entity
+
+import com.josedev.mycontacts.domain.entity.Contact
+import com.josedev.mycontacts.domain.entity.SortType
 
 data class ContactState(
     val contacts: List<Contact> = emptyList(),

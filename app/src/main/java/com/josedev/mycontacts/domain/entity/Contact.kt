@@ -1,4 +1,4 @@
-package com.josedev.mycontacts.ui.theme
+package com.josedev.mycontacts.domain.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

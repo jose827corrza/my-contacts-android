@@ -1,4 +1,4 @@
-package com.josedev.mycontacts
+package com.josedev.mycontacts.presentation.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,8 +10,8 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.josedev.mycontacts.ui.theme.ContactEvent
-import com.josedev.mycontacts.ui.theme.ContactState
+import com.josedev.mycontacts.domain.repository.ContactEvent
+import com.josedev.mycontacts.domain.entity.ContactState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

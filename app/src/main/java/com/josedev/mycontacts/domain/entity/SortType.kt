@@ -1,4 +1,4 @@
-package com.josedev.mycontacts.ui.theme
+package com.josedev.mycontacts.domain.entity
 
 enum class SortType {
     FIRST_NAME,

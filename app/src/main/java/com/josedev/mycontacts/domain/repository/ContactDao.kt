@@ -1,9 +1,10 @@
-package com.josedev.mycontacts.ui.theme
+package com.josedev.mycontacts.domain.repository
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Query
 import androidx.room.Upsert
+import com.josedev.mycontacts.domain.entity.Contact
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -17,13 +18,13 @@ interface ContactDao {
     @Delete
     suspend fun deleteContact(contact: Contact)
 
-    @Query("SELECT * FROM contact ORDER BY firstName ASC")
+    @Query("SELECT * FROM Contact ORDER BY firstName ASC")
     fun getContactsOrderedByFirstName(): Flow<List<Contact>>
     //We use flows because it can be useful to emit  and notify us when a change has been made
 
-    @Query("SELECT * FROM contact ORDER BY lastName ASC")
+    @Query("SELECT * FROM Contact ORDER BY lastName ASC")
     fun getContactsOrderedByLastName(): Flow<List<Contact>>
 
-    @Query("SELECT * FROM contact ORDER BY phoneNumber ASC")
+    @Query("SELECT * FROM Contact ORDER BY phoneNumber ASC")
     fun getContactsOrderedByPhoneNumber(): Flow<List<Contact>>
 }
