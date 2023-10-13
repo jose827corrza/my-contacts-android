@@ -17,23 +17,28 @@ import com.josedev.mycontacts.data.ContactDatabase
 import com.josedev.mycontacts.presentation.composable.ContactScreen
 import com.josedev.mycontacts.presentation.viewmodel.ContactViewModel
 import com.josedev.mycontacts.ui.theme.MyContactsTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     //TODO, improve this by using DI
-    private val db by lazy {
-        Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "contacts.db").build()
-    }
+//    private val db by lazy {
+//        Room.databaseBuilder(applicationContext, ContactDatabase::class.java, "contacts.db").build()
+//    }
+    // With DI is located into AppModule.kt
 
-    private val viewModel by viewModels<ContactViewModel>(
-        factoryProducer = {
-            object: ViewModelProvider.Factory {
-                override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                    return ContactViewModel(db.dao) as T
-                }
-            }
-        }
-    )
+//    private val viewModel by viewModels<ContactViewModel>(
+//        factoryProducer = {
+//            object: ViewModelProvider.Factory {
+//                override fun <T : ViewModel> create(modelClass: Class<T>): T {
+//                    return ContactViewModel(db.dao) as T
+//                }
+//            }
+//        }
+//    )
+    // With DI
+    private val viewModel: ContactViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
